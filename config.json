@@ -1,0 +1,17 @@
+{
+    "_comment": "Setting start date of training data",
+    "stock_dict": {
+        "AMZN": "2013-12-02",
+        "GOOGL": "2014-03-06",
+        "MSFT": "2013-10-01",
+        "NVDA": "2020-05-01",
+        "AAPL": "2016-07-01",
+        "NFLX": "2015-04-01",
+        "AVGO": "2020-04-01",
+        "TSLA": "2019-10-23",
+        "META": "2013-07-01"
+    },
+    "TRAING_END_DATE": "2023-12-31",
+    "TEST_START_DATE": "2024-01-01",
+    "TEST_END_DATE": "2024-12-31"
+}
