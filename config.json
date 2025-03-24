@@ -11,6 +11,18 @@
         "TSLA": "2019-10-23",
         "META": "2013-07-01"
     },
-    "TRAING_END_DATE": "2023-12-31",
-    "TEST_START_DATE": "2024-01-01",
-    "TEST_END_DATE": "2024-12-31",
+    "TRAING_END_DATE": "2022-12-31",
+    "TEST_START_DATE": "2023-01-01",
+    "TEST_END_DATE": "2023-12-31",
+    "permno_dict": {
+        "AAPL": "14593",
+        "AMZN": "84788",
+        "GOOGL": "90319",
+        "MSFT": "10107",
+        "NVDA": "86580",
+        "NFLX": "89393",
+        "AVGO": "93002",
+        "TSLA": "93436",
+        "META": "13407"
+    }
+}
