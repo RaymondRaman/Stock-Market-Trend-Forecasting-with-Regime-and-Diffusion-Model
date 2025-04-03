@@ -10,4 +10,5 @@
 ### **Testing Data (First Image):**
 - The testing visualization shows the entire 2023-2024 period classified as **State 2 (red)**.
 - This classification is reasonable because:
-  - The
+  - The testing period spans a consistent uptrend phase, with prices rising from ~$85 in January 2023 to ~$140 in January 2024.
+  - There are no major market corrections or volatility shifts during this time that would require the identification of additional regimes.
