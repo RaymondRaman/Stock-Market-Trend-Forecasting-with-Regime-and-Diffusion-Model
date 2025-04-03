@@ -1,0 +1,9 @@
+## Training Data Analysis:
+- Purple (earliest period): Represents initial gradual uptrend phase
+- Blue (middle period): Captures steeper, more consistent uptrend
+- Orange/Yellow (brief transition): Marks shift to higher volatility
+- Red and Green (later periods): Alternating volatile regimes during market peaks and downtrends
+
+## Testing Data Analysis:
+- Blue (State 0): Effectively identifies the lower-price consolidation/pullback period in early 2023 (January-March) between $80-100
+- Purple (State 3): Consistently captures the uptrend phase from March 2023 onwards as price rises from ~$100 to ~$150+

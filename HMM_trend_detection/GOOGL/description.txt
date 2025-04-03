@@ -1,0 +1,13 @@
+## **Analysis**
+
+### **Training Data (Second Image):**
+- The training visualization shows multiple regimes:
+  - **Blue (State 0)**: Represents early consolidation and lower price ranges.
+  - **Red (State 2)**: Captures steady uptrend phases similar to the testing data.
+  - **Green (State 1)**: Identifies peak periods and higher price ranges.
+  - **Purple (State 3)**: Appears during high volatility or correction phases.
+
+### **Testing Data (First Image):**
+- The testing visualization shows the entire 2023-2024 period classified as **State 2 (red)**.
+- This classification is reasonable because:
+  - The

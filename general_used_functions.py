@@ -146,7 +146,7 @@ def plot_market_regime(states, stock, is_test=False, fixed_palette=FIXED_COLORS)
     plt.show()
 
 
-def HMM_training(stock, train_df, n_components=3, n_iter=1000):
+def HMM_training(stock, train_df, n_components=3, n_iter=10000):
     # Exclude the date column when training the model
     features = train_df.drop(columns=['date'])
     model = hmm.GaussianHMM(n_components=n_components,
@@ -188,10 +188,10 @@ def save_HMM_states_excel(stock, states, is_test=False):
     subscript = "(Testing)" if is_test else "(Training)"
 
     # If the directory does not exist, create it
-    os.makedirs(f"{DATA_DIR}/HMM_states", exist_ok=True)
+    os.makedirs(f"{DATA_DIR}/HMM_states/{stock}", exist_ok=True)
 
     states.to_excel(
-        f"{DATA_DIR}/HMM_states/{stock}_HMM_states{subscript}.xlsx", index=False)
+        f"{DATA_DIR}/HMM_states/{stock}/{stock}_HMM_states{subscript}.xlsx", index=False)
 
 
 def save_HMM_model(stock, model):
@@ -202,33 +202,3 @@ def save_HMM_model(stock, model):
     # Save the model using joblib
     model_filename = os.path.join(DATA_DIR, f'{stock}_HMM_model.joblib')
     joblib.dump(model, model_filename)
-
-# # Training
-# for stock, weird_columns in training_weird_columns_dict.items():
-#     if weird_columns:
-#         training_feature_df[stock] = handle_weird_data_with_knn_imputer(training_feature_df[stock], weird_columns)
-
-# # Testing
-# for stock, weird_columns in testing_weird_columns_dict.items():
-#     if weird_columns:
-#         testing_feature_df[stock] = handle_weird_data_with_knn_imputer(testing_feature_df[stock], weird_columns)
-
-# # Check the data again
-# for stock, stock_data in training_feature_df.items():
-#     if check_weird_data(stock_data):
-#         print(f"The {stock} stock price data still contains weird data in training data")
-
-# for stock, stock_data in testing_feature_df.items():
-#     if check_weird_data(stock_data):
-#         print(f"The {stock} stock price data still contains weird data in testing data")
-
-# # Clear weird_columns_dict, only clear the value, not the key
-# for stock in stock_list:
-#     training_weird_columns_dict[stock] = []
-
-# for stock in stock_list:
-#     testing_weird_columns_dict[stock] = []
-
-# # Print the result to ensure the data is correct
-# print(training_feature_df['AAPL'].head().to_string())
-# print(testing_feature_df['AAPL'].head().to_string())
