@@ -1,0 +1,23 @@
+### Failure: The best model trained but still fails to detect market regimes
+
+### Training Data Regimes:
+- **Green**: Initial phase showing consistent uptrend at lower price levels (earliest period)
+- **Yellow/Orange**: Brief appearance during a sharp correction phase (likely COVID crash)
+- **Green (again)**: Recovery phase following correction
+- **Purple**: Middle uptrend phase as prices continue climbing
+- **Red**: Later uptrend phase, capturing the steepest price increases
+- **Blue**: Final phase showing market peak and subsequent downtrend/correction
+
+### Testing Data Regimes:
+- **Blue (State 0)**: Used for the initial phase from January through March 2023, showing uptrend from ~$130 to ~$160
+- **Red (State 2)**: Dominates from April 2023 to January 2024, covering:
+  * Continued uptrend from ~$160 to ~$195 (April-July)
+  * Downtrend/correction from ~$195 to ~$170 (August-October)
+  * Recovery/uptrend from ~$170 back to ~$195 (November-December)
+- **Green (State 1)** and **Purple (State 3)**: Appear only briefly at the beginning of the period
+
+### Consistency Assessment:
+There are clear inconsistencies in how regimes are applied between datasets:
+- In training data, blue represents market peak and downtrend
+- In testing data, blue represents uptrend
+- Similarly, red represents only uptrend in training but both uptrend AND downtrend in testing

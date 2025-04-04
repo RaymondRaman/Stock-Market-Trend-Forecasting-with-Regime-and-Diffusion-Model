@@ -134,6 +134,13 @@
             "NVDA_turnover_126d",
             "NVDA_maxret",
             "NVDA_betabab_1260d"
+        ],
+        "AAPL": [
+            "date",
+            "AAPL",
+            "AAPL_exponential_moving_average_5",
+            "AAPL_ami_126d",
+            "UMCSENT"
         ]
     }
 }

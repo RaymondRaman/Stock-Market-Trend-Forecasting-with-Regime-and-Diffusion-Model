@@ -148,7 +148,7 @@ def plot_market_regime(states, stock, is_test=False, fixed_palette=FIXED_COLORS,
     plt.show()
 
 
-def HMM_training(stock, train_df, n_components=3, n_iter=1000000):
+def HMM_training(stock, train_df, n_components=3, n_iter=10000):
     # Exclude the date column when training the model
     features = train_df.drop(columns=['date'])
     model = hmm.GaussianHMM(n_components=n_components,
