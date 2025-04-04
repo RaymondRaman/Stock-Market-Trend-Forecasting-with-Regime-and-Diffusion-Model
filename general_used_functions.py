@@ -101,7 +101,7 @@ FIXED_COLORS = {
 }
 
 
-def plot_market_regime(states, stock, is_test=False, fixed_palette=FIXED_COLORS):
+def plot_market_regime(states, stock, is_test=False, fixed_palette=FIXED_COLORS, isHMM=True):
     sns.set(font_scale=15)
     # Determine the unique states present in the current dataset
     unique_states = sorted(states['states'].unique())
@@ -134,14 +134,16 @@ def plot_market_regime(states, stock, is_test=False, fixed_palette=FIXED_COLORS)
     sns.despine(offset=10)
 
     # Save the plot in HMM_trend_detection directory
-    DATA_DIR = os.getcwd() + f'/HMM_trend_detection/{stock}'
+    DATA_DIR = os.getcwd() + \
+        f'/trend_detection/{stock}' if isHMM else os.getcwd() + \
+        f'/trend_detection/{stock}'
     if is_test:
-        plt.savefig(
-            f"{DATA_DIR}/{stock}_HMM_test_trend_detection.png", dpi=300)
+        save_path = f"{DATA_DIR}/{stock}_HMM_test_trend_detection.png" if isHMM else f"{DATA_DIR}/{stock}_SJM_test_trend_detection.png"
+        plt.savefig(save_path, dpi=300)
     else:
         os.makedirs(DATA_DIR, exist_ok=True)
-        plt.savefig(
-            f"{DATA_DIR}/{stock}_HMM_train_trend_detection.png", dpi=300)
+        save_path = f"{DATA_DIR}/{stock}_HMM_train_trend_detection.png" if isHMM else f"{DATA_DIR}/{stock}_SJM_train_trend_detection.png"
+        plt.savefig(save_path, dpi=300)
 
     plt.show()
 

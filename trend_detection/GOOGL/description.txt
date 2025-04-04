@@ -1,14 +1,14 @@
-## **Analysis**
+### Training Data Regimes:
+- **Red**: Early phase showing relatively flat/sideways movement with some mild fluctuations
+- **Green**: Middle phase capturing a consistent, steady uptrend period
+- **Purple**: Brief appearance during steeper uptrend acceleration
+- **Blue**: Final phase showing market peak and subsequent downtrend
 
-### **Training Data (Second Image):**
-- The training visualization shows multiple regimes:
-  - **Blue (State 0)**: Represents early consolidation and lower price ranges.
-  - **Red (State 2)**: Captures steady uptrend phases similar to the testing data.
-  - **Green (State 1)**: Identifies peak periods and higher price ranges.
-  - **Purple (State 3)**: Appears during high volatility or correction phases.
+### Testing Data Regimes:
+- **Green (State 1)**: Dominates almost the entire testing period from January 2023 to January 2024, capturing the consistent uptrend from ~$85 to ~$140+
+- **Red (State 2)**: Appears only in a single data point near the beginning of January 2023
 
-### **Testing Data (First Image):**
-- The testing visualization shows the entire 2023-2024 period classified as **State 2 (red)**.
-- This classification is reasonable because:
-  - The testing period spans a consistent uptrend phase, with prices rising from ~$85 in January 2023 to ~$140 in January 2024.
-  - There are no major market corrections or volatility shifts during this time that would require the identification of additional regimes.
+### Consistency Assessment:
+- In the training data, green clearly represents a steady uptrend phase
+- In the testing data, green is similarly used to identify the uptrend that characterizes almost the entire 2023 period
+- The model consistently applies the green regime to uptrend periods across both datasets
