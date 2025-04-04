@@ -1,0 +1,15 @@
+### Training Data Regimes:
+- **Blue** (earliest phase): Initial gradual uptrend phase
+- **Purple** (middle phase): Continued steady uptrend period
+- **Red** (later phase): Accelerating uptrend leading to peak
+- **Green** (final phase): Market peak and subsequent downtrend/correction
+
+### Testing Data Regimes:
+- **Purple (State 3)**: Dominates almost the entire testing period from January 2023 to January 2024, capturing the consistent uptrend from ~$220 to ~$380
+- **Blue (State 0)**: Appears only as a single data point at the beginning of January 2023
+
+### Consistency Assessment:
+The model maintains consistency in how it applies the purple regime between training and testing data:
+- In both datasets, purple clearly represents a steady uptrend phase
+- The testing period is predominantly characterized by a consistent uptrend throughout 2023, which the model correctly identifies with a single regime (purple)
+- The model avoids artificially dividing the testing period into multiple regimes when the overall market behavior remains consistent

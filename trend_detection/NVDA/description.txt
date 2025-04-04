@@ -1,0 +1,12 @@
+### Training Data Regimes (Revised Understanding):
+- **Red**: Initial uptrend phase at lower price levels
+- **Green**: Middle phase showing steady uptrend with moderate slope
+- **Blue**: Steep acceleration phase leading to market peak (highest prices)
+- **Purple**: Initial downtrend/correction after the peak
+- **Yellow/Orange**: What appears to be the beginning of a new uptrend after the correction phase
+
+### Testing Data Regimes:
+- **Yellow/Orange (State 4)**: Continuous uptrend from January 2023 to January 2024 ($14 to $50)
+
+### Consistency Reassessment:
+If we view the training and testing data as a continuous timeline, the yellow/orange regime at the end of the training period could indeed represent the beginning of the same uptrend that continues throughout the testing period.

@@ -125,7 +125,7 @@ def plot_market_regime(states, stock, is_test=False, fixed_palette=FIXED_COLORS,
     if not is_test:
         fg.fig.suptitle(f'Historical {stock} Market Trend {subscripts}',
                         fontsize=80, fontweight='bold')
-        fg.fig.set_size_inches(80, 40)
+        fg.fig.set_size_inches(60, 30)
     else:
         # Smaller size for testing
         fg.fig.set_size_inches(10, 10)
@@ -148,7 +148,7 @@ def plot_market_regime(states, stock, is_test=False, fixed_palette=FIXED_COLORS,
     plt.show()
 
 
-def HMM_training(stock, train_df, n_components=3, n_iter=10000):
+def HMM_training(stock, train_df, n_components=3, n_iter=1000000):
     # Exclude the date column when training the model
     features = train_df.drop(columns=['date'])
     model = hmm.GaussianHMM(n_components=n_components,
