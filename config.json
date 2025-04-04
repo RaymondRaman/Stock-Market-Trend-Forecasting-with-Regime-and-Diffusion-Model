@@ -73,6 +73,23 @@
             "GOOGL_ami_126d",
             "GOOGL_age",
             "GOOGL_zero_trades_12m"
+        ],
+        "MSFT": [
+            "date",
+            "MSFT",
+            "MSFT_exponential_moving_average_5",
+            "MSFT_age",
+            "MSFT_exponential_moving_average_10",
+            "MSFT_ocfq_saleq_std",
+            "MSFT_mvel1",
+            "MSFT_zero_trades_6m",
+            "MSFT_exponential_moving_average_21",
+            "USEPUINDXD_EWMAhl21",
+            "MSFT_ami_126d",
+            "MSFT_VXN_LogDiff_EWMAhl63",
+            "MSFT_qmj",
+            "HOUST",
+            "T10Y2Y_EWMAhl10"
         ]
     }
 }
