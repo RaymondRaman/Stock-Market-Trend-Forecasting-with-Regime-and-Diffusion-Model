@@ -1,0 +1,21 @@
+### Training Data Regimes:
+- **Yellow/Orange**: Initial uptrend at lowest price levels ($30-60)
+- **Purple**: Continued uptrend at moderate price levels ($60-100) 
+- **Blue**: Middle phase showing mixed behavior with uptrends and volatility ($100-300)
+- **Green**: Steep acceleration phase leading to market peak ($300-400+)
+- **Red**: Final phase showing significant downtrend/correction ($400 down to ~$100)
+
+### Testing Data Regimes:
+- **Purple (State 3)**: Used for January through June 2023, capturing:
+  * Lower price range ($110-275)
+  * Initial uptrend from lowest points
+  * Various fluctuations within this lower band
+- **Blue (State 0)**: Used for July 2023 through January 2024, capturing:
+  * Higher price range ($225-290)
+  * Peak around $290 followed by significant volatility
+  * Both rallies and pullbacks within this range
+
+### Consistency Assessment:
+The model maintains reasonable consistency in how regimes are applied between datasets:
+- **Purple** consistently represents lower price ranges with uptrend characteristics
+- **Blue** consistently represents higher price ranges with greater volatility
