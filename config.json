@@ -141,6 +141,23 @@
             "AAPL_exponential_moving_average_5",
             "AAPL_ami_126d",
             "UMCSENT"
+        ],
+        "NFLX": [
+            "date",
+            "NFLX",
+            "NFLX_qmj_growth",
+            "NFLX_exponential_moving_average_5",
+            "NFLX_mom6m",
+            "NFLX_exponential_moving_average_21",
+            "NFLX_qmj",
+            "NFLX_mvel1"
+        ],
+        "AVGO": [
+            "date",
+            "AVGO",
+            "AVGO_exponential_moving_average_5",
+            "AVGO_exponential_moving_average_10",
+            "M2_RealGrowth"
         ]
     }
 }
