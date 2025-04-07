@@ -173,13 +173,4 @@
             "TSLA_exponential_moving_average_5",
             "TSLA_sortino_ratio_5",
             "TSLA_exponential_moving_average_10",
-            "TSLA_exponential_moving_average_21"
-        ],
-        "META": [
-            "date",
-            "META",
-            "META_mvel1",
-            "META_zero_trades_12m"
-        ]
-    }
-}
+            "T
