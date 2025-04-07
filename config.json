@@ -25,6 +25,14 @@
         "TSLA": "93436",
         "META": "13407"
     },
+    "selected_unsupervised_model": {
+        "AMZN": "HMM",
+        "GOOGL": "HMM",
+        "MSFT": "HMM",
+        "NVDA": "SJM",
+        "NFLX": "SJM",
+        "META": "SJM"
+    },
     "selected_features_dict": {
         "AMZN": [
             "date",

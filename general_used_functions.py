@@ -44,7 +44,7 @@ def load_training_data():
 
     for stock in stock_list:
         feature_data = pd.read_excel(
-            f'{DATA_DIR}/training_data_full/training_feature_{stock}.xlsx')
+            f'{DATA_DIR}/training_feature_data_full/training_feature_{stock}.xlsx')
         stock_data = pd.read_excel(
             f'{DATA_DIR}/stock_price_data/training/{stock}_stock_price_data(training).xlsx')
 
@@ -70,7 +70,7 @@ def load_testing_data():
 
     for stock in stock_list:
         feature_data = pd.read_excel(
-            f'{DATA_DIR}/testing_data_full/testing_feature_{stock}.xlsx')
+            f'{DATA_DIR}/testing_feature_data_full/testing_feature_{stock}.xlsx')
         stock_data = pd.read_excel(
             f'{DATA_DIR}/stock_price_data/testing/{stock}_stock_price_data(testing).xlsx')
 
