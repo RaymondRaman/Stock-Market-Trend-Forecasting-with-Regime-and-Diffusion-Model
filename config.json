@@ -40,49 +40,56 @@
             "data_root_train": "./ARMD/Data/diffusion_training_data/AMZN/AMZN_training_data.csv",
             "data_root_test": "./ARMD/Data/diffusion_testing_data/AMZN/AMZN_testing_data.csv",
             "results_folder": "./Checkpoints_AMZN",
-            "name": "AMZN"
+            "name": "AMZN",
+            "feature_size_without_states": 34
         },
         "GOOGL": {
             "feature_size": 12,
             "data_root_train": "./ARMD/Data/diffusion_training_data/GOOGL/GOOGL_training_data.csv",
             "data_root_test": "./ARMD/Data/diffusion_testing_data/GOOGL/GOOGL_testing_data.csv",
             "results_folder": "./Checkpoints_GOOGL",
-            "name": "GOOGL"
+            "name": "GOOGL",
+            "feature_size_without_states": 8
         },
         "MSFT": {
             "feature_size": 18,
             "data_root_train": "./ARMD/Data/diffusion_training_data/MSFT/MSFT_training_data.csv",
             "data_root_test": "./ARMD/Data/diffusion_testing_data/MSFT/MSFT_testing_data.csv",
             "results_folder": "./Checkpoints_MSFT",
-            "name": "MSFT"
+            "name": "MSFT",
+            "feature_size_without_states": 14
         },
         "NVDA": {
             "feature_size": 46,
             "data_root_train": "./ARMD/Data/diffusion_training_data/NVDA/NVDA_training_data.csv",
             "data_root_test": "./ARMD/Data/diffusion_testing_data/NVDA/NVDA_testing_data.csv",
             "results_folder": "./Checkpoints_NVDA",
-            "name": "NVDA"
+            "name": "NVDA",
+            "feature_size_without_states": 41
         },
         "NFLX": {
             "feature_size": 12,
             "data_root_train": "./ARMD/Data/diffusion_training_data/NFLX/NFLX_training_data.csv",
             "data_root_test": "./ARMD/Data/diffusion_testing_data/NFLX/NFLX_testing_data.csv",
             "results_folder": "./Checkpoints_NFLX",
-            "name": "NFLX"
+            "name": "NFLX",
+            "feature_size_without_states": 7
         },
         "TSLA": {
-            "feature_size": 9,
+            "feature_size": 10,
             "data_root_train": "./ARMD/Data/diffusion_training_data/TSLA/TSLA_training_data.csv",
             "data_root_test": "./ARMD/Data/diffusion_testing_data/TSLA/TSLA_testing_data.csv",
             "results_folder": "./Checkpoints_TSLA",
-            "name": "TSLA"
+            "name": "TSLA",
+            "feature_size_without_states": 5
         },
         "META": {
             "feature_size": 8,
             "data_root_train": "./ARMD/Data/diffusion_training_data/META/META_training_data.csv",
             "data_root_test": "./ARMD/Data/diffusion_testing_data/META/META_testing_data.csv",
             "results_folder": "./Checkpoints_META",
-            "name": "META"
+            "name": "META",
+            "feature_size_without_states": 3
         }
     },
     "selected_features_dict": {
@@ -234,4 +241,3 @@
             "META_zero_trades_12m"
         ]
     }
-}

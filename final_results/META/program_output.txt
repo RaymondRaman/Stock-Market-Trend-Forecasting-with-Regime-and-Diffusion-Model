@@ -1,0 +1,18 @@
+Note: you may need to restart the kernel to use updated packages.
+Training model with config: ./ARMD/Config/META_armd_config_no_states.yaml
+Drop all columns that start with 'state'
+loss: 0.008784: 100%|██████████| 2000/2000 [00:11<00:00, 167.10it/s]   
+training complete
+Drop all columns that start with 'state'
+Results for (not including states data) features:
+MSE (Stock Price): 0.7514199294819086
+MAE (Stock Price): 0.80664063895857
+sampling loop time step: 100%|██████████| 1/1 [00:00<00:00, 1261.07it/s]
+
+Training model with config: ./ARMD/Config/META_armd_config.yaml
+loss: 0.632359: 100%|██████████| 2000/2000 [00:21<00:00, 94.97it/s]    
+training complete
+sampling loop time step: 100%|██████████| 1/1 [00:00<00:00, 919.00it/s]
+Results for (including states data) features:
+MSE (Stock Price): 0.6259425636982403
+MAE (Stock Price): 0.720504453847733

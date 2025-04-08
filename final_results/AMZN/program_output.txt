@@ -1,0 +1,18 @@
+Note: you may need to restart the kernel to use updated packages.
+Training model with config: ./ARMD/Config/AMZN_armd_config_no_states.yaml
+Drop all columns that start with 'state'
+loss: 0.112075: 100%|██████████| 2000/2000 [01:23<00:00, 23.93it/s]   
+training complete
+Drop all columns that start with 'state'
+sampling loop time step: 100%|██████████| 1/1 [00:00<00:00, 160.41it/s]
+Results for (not including states data) features:
+MSE (Stock Price): 0.8018215010563736
+MAE (Stock Price): 0.7917438728916698
+
+Training model with config: ./ARMD/Config/AMZN_armd_config.yaml
+loss: 0.720274: 100%|██████████| 2000/2000 [01:28<00:00, 22.69it/s]   
+training complete
+sampling loop time step: 100%|██████████| 1/1 [00:00<00:00, 190.83it/s]
+Results for (including states data) features:
+MSE (Stock Price): 0.7832822588971755
+MAE (Stock Price): 0.7785484666984328

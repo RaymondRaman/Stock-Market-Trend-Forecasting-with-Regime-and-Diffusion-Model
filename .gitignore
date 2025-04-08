@@ -8,3 +8,5 @@ __pycache__/*
 model
 jump-models
 ARMD
+checkpoints*
+forecasting_exp
