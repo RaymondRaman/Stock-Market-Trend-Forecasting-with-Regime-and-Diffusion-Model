@@ -31,7 +31,59 @@
         "MSFT": "HMM",
         "NVDA": "SJM",
         "NFLX": "SJM",
-        "META": "SJM"
+        "META": "SJM",
+        "TSLA": "SJM"
+    },
+    "diffusion_stock_info": {
+        "AMZN": {
+            "feature_size": 39,
+            "data_root_train": "./ARMD/Data/diffusion_training_data/AMZN/AMZN_training_data.csv",
+            "data_root_test": "./ARMD/Data/diffusion_testing_data/AMZN/AMZN_testing_data.csv",
+            "results_folder": "./Checkpoints_AMZN",
+            "name": "AMZN"
+        },
+        "GOOGL": {
+            "feature_size": 12,
+            "data_root_train": "./ARMD/Data/diffusion_training_data/GOOGL/GOOGL_training_data.csv",
+            "data_root_test": "./ARMD/Data/diffusion_testing_data/GOOGL/GOOGL_testing_data.csv",
+            "results_folder": "./Checkpoints_GOOGL",
+            "name": "GOOGL"
+        },
+        "MSFT": {
+            "feature_size": 18,
+            "data_root_train": "./ARMD/Data/diffusion_training_data/MSFT/MSFT_training_data.csv",
+            "data_root_test": "./ARMD/Data/diffusion_testing_data/MSFT/MSFT_testing_data.csv",
+            "results_folder": "./Checkpoints_MSFT",
+            "name": "MSFT"
+        },
+        "NVDA": {
+            "feature_size": 46,
+            "data_root_train": "./ARMD/Data/diffusion_training_data/NVDA/NVDA_training_data.csv",
+            "data_root_test": "./ARMD/Data/diffusion_testing_data/NVDA/NVDA_testing_data.csv",
+            "results_folder": "./Checkpoints_NVDA",
+            "name": "NVDA"
+        },
+        "NFLX": {
+            "feature_size": 12,
+            "data_root_train": "./ARMD/Data/diffusion_training_data/NFLX/NFLX_training_data.csv",
+            "data_root_test": "./ARMD/Data/diffusion_testing_data/NFLX/NFLX_testing_data.csv",
+            "results_folder": "./Checkpoints_NFLX",
+            "name": "NFLX"
+        },
+        "TSLA": {
+            "feature_size": 9,
+            "data_root_train": "./ARMD/Data/diffusion_training_data/TSLA/TSLA_training_data.csv",
+            "data_root_test": "./ARMD/Data/diffusion_testing_data/TSLA/TSLA_testing_data.csv",
+            "results_folder": "./Checkpoints_TSLA",
+            "name": "TSLA"
+        },
+        "META": {
+            "feature_size": 8,
+            "data_root_train": "./ARMD/Data/diffusion_training_data/META/META_training_data.csv",
+            "data_root_test": "./ARMD/Data/diffusion_testing_data/META/META_testing_data.csv",
+            "results_folder": "./Checkpoints_META",
+            "name": "META"
+        }
     },
     "selected_features_dict": {
         "AMZN": [
@@ -173,4 +225,13 @@
             "TSLA_exponential_moving_average_5",
             "TSLA_sortino_ratio_5",
             "TSLA_exponential_moving_average_10",
-            "T
+            "TSLA_exponential_moving_average_21"
+        ],
+        "META": [
+            "date",
+            "META",
+            "META_mvel1",
+            "META_zero_trades_12m"
+        ]
+    }
+}
