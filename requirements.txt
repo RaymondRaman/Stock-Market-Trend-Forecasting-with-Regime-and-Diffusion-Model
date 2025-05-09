@@ -1,1 +1,6 @@
 pandas
+matplotlib
+seaborn
+hmmlearn
+openpyxl
+xgboost
