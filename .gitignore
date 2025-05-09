@@ -10,3 +10,5 @@ jump-models
 ARMD
 checkpoints*
 forecasting_exp
+stock_price_data_prep.ipynb
+feature_construction.ipynb
