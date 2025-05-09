@@ -1,13 +1,11 @@
-data
 Research paper
+data
 Term1
 Term2
 Topic Selection
 .DS_Store
 __pycache__/*
 model
-jump-models
-ARMD
 checkpoints*
 forecasting_exp
 stock_price_data_prep.ipynb
