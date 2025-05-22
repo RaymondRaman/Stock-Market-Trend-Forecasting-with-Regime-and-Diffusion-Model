@@ -5,7 +5,7 @@ dataloader:
   test_dataset:
     coefficient: 0.01
     params:
-      data_root: ./ARMD/Data/diffusion_testing_data/GOOGL/GOOGL_testing_data.csv
+      data_root: ./ARMD/Data/diffusion_training_data/GOOGL/GOOGL_training_data.csv
       distribution: geometric
       name: GOOGL
       neg_one_to_one: true

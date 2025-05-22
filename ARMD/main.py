@@ -85,35 +85,39 @@ def parse_arguments():
     return args
 
 
-def plot_forcasting(price_forecast_normalized, price_real_normalized, scaler, ticker, substring):
-    scale_price = scaler.scale_[0]
-    mean_price = scaler.mean_[0]
+def plot_forcasting(sampled_forecast_values, real_future_values, ticker, context_len, pred_len, historical_context, last_historical_point):
+    # Line 1: Full Actual Series (Historical Context + Real Future Values)
+    # X-axis for the full actual series
+    x_full_actual = np.arange(0, context_len + pred_len)
+    # Y-axis for the full actual series
+    y_full_actual = np.concatenate((historical_context, real_future_values))
 
-    price_forecast_original = unnormalize_to_zero_to_one(
-        price_forecast_normalized)
-    price_forecast_original = price_forecast_original.reshape(
-        price_forecast_normalized.shape)
-
-    price_real_original = unnormalize_to_zero_to_one(price_real_normalized)
-    price_real_original = price_real_original.reshape(
-        price_real_normalized.shape)
-
-    forecast_1_original = price_forecast_normalized[0]
-    real_1_original = price_real_normalized[0]
-    time_axis = range(len(forecast_1_original))
+    # Line 2: Sampled Forecast (connected to the last historical point)
+    # Y-axis for sampled forecast, starting with the last historical point
+    y_sampled_forecast_connected = np.concatenate(
+        ([last_historical_point], sampled_forecast_values))
+    # X-axis for this connected forecast line (starts one step before context_len to include last_historical_point)
+    x_sampled_forecast_connected = np.arange(
+        context_len - 1, context_len - 1 + len(y_sampled_forecast_connected))
 
     plt.figure(figsize=(12, 6))
-    plt.plot(time_axis, real_1_original, label='Real Stock Price', marker='o')
-    plt.plot(time_axis, forecast_1_original,
-             label='Forecasted Stock Price', marker='x')
-    plt.xlabel('Time Step')
-    plt.ylabel('Stock Price')
+    plt.plot(x_full_actual, y_full_actual,
+             label='Actual Values (History + Future)', color='green')
+    plt.plot(x_sampled_forecast_connected, y_sampled_forecast_connected,
+             label='Sampled Forecast (Connected to History)', color='blue', linestyle='--')
+
     plt.title(
-        f'Real vs. Forecasted Stock Price for {ticker} {substring}')
+        f'Real vs. Forecasted Stock Price for {ticker}')
+    plt.xlabel('Time Steps')
+    plt.ylabel('Stock Price')
+    plt.axvline(x=context_len - 1, color='r', linestyle=':', linewidth=1,
+                label='Forecast Start')  # Mark where forecast begins
     plt.legend()
+    plt.grid(True)
+
     os.makedirs(f'./final_results/{ticker}', exist_ok=True)
     plt.savefig(
-        f'./final_results/{ticker}/{ticker}_forecasting_{substring}.png')
+        f'./final_results/{ticker}/{ticker}_forecasting.png')
 
 
 if __name__ == "__main__":
@@ -152,21 +156,23 @@ if __name__ == "__main__":
         test_dataloader, shape=[seq_len, feat_num])
     mask = test_dataset.masking
 
-    # Extract only column 0 (the stock price) from both sample and real_
-    price_forecast = sample[..., 0]  # shape (n_samples, seq_length)
-    price_real = real_[..., 0]        # shape (n_samples, seq_length)
+    # Extract the historical context for the first sample, first feature which is the stock price
+    context_len = seq_len
+    pred_len = seq_len
+    historical_context = test_scaled[0, :context_len, 0]
+    last_historical_point = historical_context[-1]
+
+    # Forecasted values and actual future values
+    sampled_forecast_values, real_future_values = sample[0, :, 0], real_[
+        0, :, 0]
 
     # Compute MSE and MAE for the stock price only
     mse = mean_squared_error(
-        price_forecast.reshape(-1), price_real.reshape(-1))
+        sampled_forecast_values.reshape(-1), real_future_values.reshape(-1))
     mae = mean_absolute_error(
-        price_forecast.reshape(-1), price_real.reshape(-1))
-
-    substring = "(including states data)" if args.use_state else "(not including states data)"
-    print(f"Results for {substring} features:")
-    print("MSE (Stock Price):", mse)
-    print("MAE (Stock Price):", mae)
+        sampled_forecast_values.reshape(-1), real_future_values.reshape(-1))
 
     # Plotting the results only with the state features
-    plot_forcasting(price_forecast, price_real, scaler,
-                    ticker=args_parsed.stock_ticker, substring=substring)
+    plot_forcasting(sampled_forecast_values, real_future_values, args_parsed.stock_ticker,
+                    context_len, pred_len, historical_context, last_historical_point)
+    print(f"MAE: {mae}, MSE: {mse}")
