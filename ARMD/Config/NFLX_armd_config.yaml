@@ -5,7 +5,7 @@ dataloader:
   test_dataset:
     coefficient: 0.01
     params:
-      data_root: ./ARMD/Data/diffusion_testing_data/NFLX/NFLX_testing_data.csv
+      data_root: ./ARMD/Data/diffusion_training_data/NFLX/NFLX_training_data.csv
       distribution: geometric
       name: NFLX
       neg_one_to_one: true
