@@ -1,5 +1,5 @@
 ### Stock Market Trend Forecasting with Regime and Diffusion Model
-![GOOGL_forecasting_(including states data)](https://github.com/user-attachments/assets/310d2b66-2d32-4730-9584-27519e2d2f97)
+![GOOGL_forecasting](https://github.com/user-attachments/assets/c11cb911-f579-456b-a340-054ac0edb674)
 
 This repository implements an innovative approach to stock market trend forecasting by combining regime detection models with diffusion models. The methodology captures market regime shifts through Hidden Markov Models (HMM) and Switching Jump Models (SJM), then leverages these insights with diffusion models to generate accurate trend forecasts.
 
