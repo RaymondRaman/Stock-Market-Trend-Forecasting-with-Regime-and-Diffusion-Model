@@ -5,7 +5,7 @@ dataloader:
   test_dataset:
     coefficient: 0.01
     params:
-      data_root: ./ARMD/Data/diffusion_testing_data/TSLA/TSLA_testing_data.csv
+      data_root: ./ARMD/Data/diffusion_training_data/TSLA/TSLA_training_data.csv
       distribution: geometric
       name: TSLA
       neg_one_to_one: true
